@@ -14,7 +14,6 @@ lb1=Label(rootlog,text="CHANGES TO THE DATABASE ARE SHOWN HERE",bg='#2B2B2B',fg=
 lb1.grid(padx=15,pady=5)
 
 rootp=Tk()
-# rootp.iconbitmap(r'D:\project_media\sdicon.ico')
 rootp.configure(bg='#2B2B2B')
 rootp.geometry('+590+50')
 rootp.title("Student Data Management  LOGIN")
@@ -69,9 +68,6 @@ def done():
             cflabel.grid(padx=15,pady=5)
             welabel=Label(rootlog,text="HI  "+getus+" !!  WELCOME To Student Data Management",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
             welabel.grid(padx=15,pady=5)
-            # f.write('\n')
-            # f.write("USER :  "+getus)
-            # f.flush()
             rootp.destroy()
 
             def run():
@@ -86,9 +82,7 @@ def done():
                 c.close()
                 lb2=Label(rootlog,text=getus+" :  STUDENT  -  "+getn+"'S  ADMISSION SUCCESSFUL",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                 lb2.grid(padx=10,pady=10)
-                # f.write('\n')
-                # f.write(getus+" :  STUDENT  -  "+getn+"'S  ADMISSION SUCCESSFUL")
-                # f.flush()
+
 
                 
             def add():
@@ -103,9 +97,7 @@ def done():
                 s=int(q)
                 no=q+1
                 adm=str(no)
-                # here q is the last admisssion number of the database
                 roots=Tk()
-                # roots.iconbitmap(r'D:\project_media\sdicon.ico')
                 roots.configure(bg='#2B2B2B')
                 roots.geometry('+100+50')
                 roots.title("Student Data Management : ADMISSION FORM")
@@ -176,7 +168,6 @@ def done():
                 
             def delete():
                 rootd=Tk()
-                # rootd.iconbitmap(r'D:\project_media\sdicon.ico')
                 rootd.configure(bg='#2B2B2B')
                 rootd.title("Student Data Management : REMOVE STUDENT")
                 rootd.geometry("400x250+100+50")
@@ -197,9 +188,7 @@ def done():
                         rootd.destroy()
                         lb3=Label(rootlog,text=getus+" :  STUDENT  "+nam+"  DELETED SUCCESSFULLY",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                         lb3.grid(padx=10,pady=10)
-                        # f.write('\n')
-                        # f.write(getus+" :  STUDENT  "+nam+"  DELETED SUCCESSFULLY")
-                        # f.flush()
+
                     
                 global delname
                 global delad
@@ -219,14 +208,12 @@ def done():
                 
             def viewdetails():
                 rootv=Tk()
-                # rootv.iconbitmap(r'D:\project_media\sdicon.ico')
                 rootv.configure(bg='#2B2B2B')
                 rootv.geometry("400x250+100+50")
                 rootv.title("Student Data Management : VIEW STUDENT RECORDS")
                 
                 def getsin():
                     rootsi=Tk()
-                    # rootsi.iconbitmap(r'D:\project_media\sdicon.ico')
                     rootsi.configure(bg='#2B2B2B')
                     rootsi.geometry("400x150+545+275")
                     rootsi.title("Student Data Management : VIEW STUDENTS BY CLASS")
@@ -245,9 +232,6 @@ def done():
                         print(tabulate(x))
                         lb4=Label(rootlog,text=getus+" :  VIEWED  "+r+"'S  DETAILS",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                         lb4.grid(padx=10,pady=10)
-                        # f.write('\n')
-                        # f.write(getus+" :  VIEWED  "+r+"'S  DETAILS")
-                        # f.flush()
                         rootsi.destroy()
                     sl=Label(rootsi,text="ENTER ADMISSION NUMBER",font=('Times New Roman',20),bg='#2B2B2B',fg='white')
                     sl.place(relx=0.5,rely=0.25,anchor=CENTER)
@@ -268,13 +252,10 @@ def done():
                     print(tabulate(r))
                     lb5=Label(rootlog,text=getus+" :  VIEWED FULL STUDENT DATABASE",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                     lb5.grid(padx=10,pady=10)
-                    # f.write('\n')
-                    # f.write(getus+" :  VIEWED FULL STUDENT DATABASE")
-                    # f.flush()
+
                     rootv.destroy()
                 def getcla():
                     rootc=Tk()
-                    # rootc.iconbitmap(r'D:\project_media\sdicon.ico')
                     rootc.configure(bg='#2B2B2B')
                     rootc.geometry("300x150+595+275")
                     rootc.title("Student Data Management : VIEW STUDENTS BY CLASS")
@@ -292,9 +273,6 @@ def done():
                         print(tabulate(x))
                         lb6=Label(rootlog,text=getus+" :  VIEWED CLASS  "+r+"  DATABASE",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                         lb6.grid(padx=10,pady=10)
-                        # f.write('\n')
-                        # f.write(getus+" :  VIEWED CLASS  "+r+"  DATABASE")
-                        # f.flush()
                         rootc.destroy()
                     clla=Label(rootc,text="ENTER THE CLASS",font=('Times New Roman',25),bg='#2B2B2B',fg='white')
                     clla.place(relx=0.5,rely=0.20,anchor=CENTER)
@@ -306,7 +284,6 @@ def done():
                     rootc.mainloop()
                 def getgen():
                     rootg=Tk()
-                    # rootg.iconbitmap(r'D:\project_media\sdicon.ico')
                     rootg.configure(bg='#2B2B2B')
                     rootg.geometry("300x200+595+275")
                     rootg.title("Student Data Management : VIEW STUDENTS BY GENDER")
@@ -326,9 +303,7 @@ def done():
                             print(tabulate(x))
                             lb7=Label(rootlog,text=getus+" :  VIEWED FEMALE STUDENT DATABASE",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                             lb7.grid(padx=10,pady=10)
-                            # f.write('\n')
-                            # f.write(getus+" :  VIEWED FEMALE STUDENT DATABASE")
-                            # f.flush()
+
                             rootg.destroy()
                         elif gchoice=="BOYS":
 
@@ -338,9 +313,6 @@ def done():
                             print(tabulate(x))
                             lb8=Label(rootlog,text=getus+" :  VIEWED MALE STUDENT DATABASE",font=('Times New Roman',10),bg='#2B2B2B',fg='white')
                             lb8.grid(padx=10,pady=10)
-                            # f.write('\n')
-                            # f.write(getus+" :  VIEWED MALE STUDENT DATABASE")
-                            # f.flush()
                             rootg.destroy()
                     ch=Label(rootg,text="CHOOSE GENDER",font=('Times New Roman',20),bg='#2B2B2B',fg='white')
                     ch.place(relx=0.50,rely=0.20,anchor=CENTER)
@@ -364,7 +336,6 @@ def done():
                 
             def update():
                 rootu=Tk()
-                # rootu.iconbitmap(r'D:\project_media\sdicon.ico')
                 rootu.configure(bg='#2B2B2B')
                 rootu.geometry("350x220+150+50")
                 rootu.title("Student Data Management : UPDATE MANAGER")
@@ -382,9 +353,6 @@ def done():
                     con.commit()
                     lb10=Label(rootlog,text=getus+" :  UPDATED  "+getn+"'S  CLASS",font=('Times New Roman',10),fg="white",bg="#2B2B2B")
                     lb10.grid(padx=10,pady=10)
-                    # f.write('\n')
-                    # f.write(getus+" :  UPDATED  "+getn+"'S  CLASS")
-                    # f.flush()
                 def updatesmob():
                     global getus
                     global rootlog
@@ -398,9 +366,7 @@ def done():
                     con.commit()
                     lb11=Label(rootlog,text=getus+" :  UPDATED  "+getn+"'S  MOBILE NUMBER",font=("Times New Roman",10),fg="white",bg="#2B2B2B")
                     lb11.grid(padx=10,pady=10)
-                    # f.write('\n')
-                    # f.write(getus+" :  UPDATED  "+getn+"'S  MOBILE NUMBER")
-                    # f.flush()
+
                 def updatesdb():
                     global getus
                     global rootlog
@@ -414,9 +380,7 @@ def done():
                     con.commit()
                     lb11=Label(rootlog,text=getus+" :  UPDATED  "+getn+"'S  DATE OF BIRTH",font=("Times New Roman",10),fg="white",bg="#2B2B2B")
                     lb11.grid(padx=10,pady=10)
-                    # f.write('\n')
-                    # f.write(getus+" :  UPDATED  "+getn+"'S  DATE OF BIRTH")
-                    # f.flush()    
+   
                 def updatesall():
                     global getus
                     global rootlog
@@ -436,12 +400,9 @@ def done():
                     con.commit()
                     lb9=Label(rootlog,text=getus+' :  UPDATED  '+getn+"'S  DETAILS",font=('Times New Roman',10),fg='white',bg='#2B2B2B')
                     lb9.grid(padx=10,pady=10)
-                    # f.write('\n')
-                    # f.write(getus+' :  UPDATED  '+getn+"'S  DETAILS")
-                    # f.flush()
+
                 def updateclass():
                     roots=Tk()
-                    # roots.iconbitmap(r'D:\project_media\sdicon.ico')
                     roots.configure(bg='#2B2B2B')
                     roots.geometry('+100+50')
                     roots.title("Student Data Management : UPDATE STUDENT'S CLASS")
@@ -475,7 +436,6 @@ def done():
                     roots.mainloop()
                 def updatemobile():
                     rootm=Tk()
-                    # rootm.iconbitmap(r'D:\project_media\sdicon.ico')
                     rootm.configure(bg='#2B2B2B')
                     rootm.geometry('+100+50')
                     rootm.title("Student Data Management : UPDATE MOBILE NUMBER")
@@ -509,7 +469,6 @@ def done():
                     rootm.mainloop()
                 def updatedob():
                     rootdb=Tk()
-                    # rootdb.iconbitmap(r'D:\project_media\sdicon.ico')
                     rootdb.configure(bg='#2B2B2B')
                     rootdb.geometry('+100+50')
                     rootdb.title("Student Data Management : CHANGE 'Date Of Birth'")
@@ -543,7 +502,6 @@ def done():
                     
                 def updateall():
                     roota=Tk()
-                    # roota.iconbitmap(r'D:\project_media\sdicon.ico')
                     roota.configure(bg='#2B2B2B')
                     roota.geometry('+100+50')
                     roota.title("Student Data Management : UPDATE STUDENT DETAILS")
@@ -623,25 +581,17 @@ def done():
                 rootu.mainloop()
 
         root=Tk()
-        # root.iconbitmap(r'D:\project_media\sdicon.ico')
         root.title("Student Data Management ")
         root.configure(bg='#2B2B2B')
         root.geometry("+150+50")
-        # addimg=PhotoImage(file=r'D:\project_media\Add_Dark.png',master=root)
         adds=Button(root,command=add,text="ADD STUDENT",bg="#2B2B2B",borderwidth=5,font=('Times New Roman',15),fg="beige")
         adds.grid(padx=10,pady=10,row=0,column=0)
-        # delimg=PhotoImage(file=r'D:\project_media\Del_Dark.png',master=root)
         deletes=Button(root,command=delete,text="DELETE STUDENT",bg="#2B2B2B",borderwidth=5,font=('Times New Roman',15),fg="beige")
-        deletes.grid(padx=10,pady=10,row=1,column=0)
-        # vwimg=PhotoImage(file=r'D:\project_media\Vw_Dark.png',master=root)
-      
+        deletes.grid(padx=10,pady=10,row=1,column=0)      
         views=Button(root,command=viewdetails,text="VIEW DETAILS",bg="#2B2B2B",borderwidth=5,font=('Times New Roman',15),fg="beige")
         views.grid(padx=10,pady=10,row=0,column=2)
-        # updimg=PhotoImage(file=r'D:\project_media\Upd_Dark.png',master=root)
         updates=Button(root,command=update,text="UPDATE DETAILS",bg="#2B2B2B",borderwidth=5,font=('Times New Roman',15),fg="beige")
         updates.grid(padx=10,pady=15,row=1,column=2)
-        #cl=Label(root,text="srikar's ",fg="beige",bg='#2B2B2B',font=('twilight',30))
-        #cl.grid(padx=5,pady=5,row=0,column=1)
         cl1=Label(root,text="Student Data Management",fg="beige",bg='#2B2B2B',font=('Times New Roman',20))
         cl1.grid(padx=5,pady=5,row=1,column=1)
         root.mainloop()
@@ -660,4 +610,3 @@ sb=Button(rootp,text="SUBMIT",command=done,fg="white",bg="grey",font=('Times New
 sb.grid(padx=10,pady=10)
 rootp.mainloop()
 rootlog.mainloop()
-# f.close()
